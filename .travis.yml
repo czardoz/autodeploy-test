@@ -4,5 +4,5 @@ node_js:
 script:
   - echo "Hello!"
 after_success:
-  - echo $TRAVIS_TAG "<<"
+  - if [ "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == false ]; then echo "TAG EXISTS"; fi
   - bash ./push-pages.sh
