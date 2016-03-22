@@ -4,4 +4,5 @@ node_js:
 script:
   - echo "Hello!"
 after_success:
+  - echo $TRAVIS_TAG "<<"
   - bash ./push-pages.sh
