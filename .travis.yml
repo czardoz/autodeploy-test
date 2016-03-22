@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "4"
 script:
-  - echo "Hello!"
+  - echo "Hello! What's up"
 after_success:
   - if [ "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == false ]; then echo "TAG EXISTS"; fi
   - bash ./push-pages.sh
